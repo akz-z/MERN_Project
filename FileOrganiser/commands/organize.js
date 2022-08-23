@@ -23,12 +23,9 @@ function organize(srcPath)
     }    
     else{
         fs.mkdirSync(organizeFile);
-    }   
-}
-let srcPath="C:/Users/Akash/Desktop/course/Web/MERN_Projects/FileOrganiser/download";
-organize(srcPath);
-
-let files=fs.readdirSync(srcPath);
+    }  
+    
+    let files=fs.readdirSync(srcPath);
 
 for(let i=0;i<files.length;i++)
 {
@@ -39,13 +36,18 @@ for(let i=0;i<files.length;i++)
     //console.log(isFile);
     if(isFile)
     {
-        let extfile=files[i].split(".")[1];
+        let extfile=path.extname(files[i]).split(".")[1];
         
         let folderName=getfolderName(extfile);
-        console.log(folderName);
+        //console.log(folderName);
         let fileDest=movefile(srcPath,filePath,folderName);
     }
-}    
+} 
+}
+//let srcPath="C:/Users/Akash/Desktop/course/Web/MERN_Projects/FileOrganiser/download";
+// organize(srcPath);
+
+   
 
 function getfolderName(extfile)
 {
@@ -58,6 +60,8 @@ function getfolderName(extfile)
                 return key;
         }
     }
+
+    return "Others";
     
 }
 
@@ -74,5 +78,10 @@ function movefile(srcPath,filepath,folderName)
     //console.log(destnpath);
     let finaldes=path.join(destnpath,filename);
     fs.copyFileSync(filepath,finaldes);
+    
 
 }
+
+module.exports ={
+    organize:organize
+};

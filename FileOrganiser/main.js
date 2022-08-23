@@ -3,6 +3,7 @@ let input=process.argv.slice(2);
 let comand=input[0];
 let  helpcommand=require("./commands/help");
 let orgfunc=require("./commands/organize");
+let treefunc=require("./commands/tree");
 
 switch(comand)
 {
@@ -15,7 +16,8 @@ switch(comand)
         break;
     }
     case "tree":{
-        console.log("Sorry this Function is under process :/" );
+        
+        treefunc.tree(input[1]);
         break;
     }
 

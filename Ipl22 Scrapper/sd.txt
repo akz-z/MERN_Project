@@ -1,0 +1,4 @@
+/html/body/div[1]/section/section/div[3]/div[2]/div/div[1]/div[1]/div/div[74]/div/div[2]/a
+
+
+document.querySelector("#main-container > div.lg\\:ds-container.lg\\:ds-mx-auto.lg\\:ds-px-5 > div.ds-flex.ds-space-x-5 > div > div.ds-mb-4 > div:nth-child(1) > div > div.ds-bg-fill-content-prime.hover\\:ds-bg-ui-fill-translucent.ds-bg-ui-fill-translucent-hover > div > div.ds-p-4.ds-border-y.ds-border-line > a")

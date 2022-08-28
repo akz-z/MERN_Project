@@ -31,7 +31,7 @@ function handlehtml(html)
         let fullLink="https://www.espncricinfo.com/" + selecTool(link[i]).attr('href');
        // console.log(fullLink);
         details.details(fullLink);
-        break
+       //break
     }
 }
 
